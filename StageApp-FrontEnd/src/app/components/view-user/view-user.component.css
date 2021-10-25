@@ -1,0 +1,88 @@
+.card_image {
+  width: 200px;
+  height: auto !important;
+}
+
+.tabs a {
+  color: #64b5f6 !important;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.tabs .col .s4 {
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+.tabs a .indicator {
+  background-color: #64b5f6 !important;
+}
+
+.collection {
+  border: none !important;
+}
+
+.collection-item {
+  border: none !important;
+}
+
+.button {
+  background: none !important;
+  border: none !important;
+  height: 10px;
+}
+
+.liked {
+  color: #64b5f6 !important;
+}
+
+.post {
+  font-weight: bold;
+  color: #64b5f6;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.item {
+  font-size: 14px;
+  color: #666565;
+}
+
+#iconSpan {
+  font-size: 10px;
+  line-height: 10px;
+  margin-right: 5px;
+}
+
+.material-icons {
+  display: inline-flex;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.postImage {
+  width: 100% !important;
+  margin: 0 auto !important;
+  left: 20px !important;
+  top: 10px !important;
+}
+
+.imgDiv {
+  display: block;
+  position: relative;
+  margin-bottom: 40px !important;
+}
+.imgCircle {
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% !important;
+  margin: 0 auto !important;
+
+  top: 20px !important;
+}
+
+.card-action {
+  margin-top: 20px;
+}

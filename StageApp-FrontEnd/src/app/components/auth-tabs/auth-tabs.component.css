@@ -1,0 +1,21 @@
+.bodyDiv {
+  height: 98vh;
+}
+
+div.bodyContainer {
+  margin-top: 10px !important ;
+}
+
+.tabs a {
+  color: #64b5f6;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.tabs .active {
+  background: inherit !important;
+}
+
+.auth-content {
+  height: 430px !important;
+}

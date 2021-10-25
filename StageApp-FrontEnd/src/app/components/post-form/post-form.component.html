@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col s12 m12 l10">
+    <div class="card postDiv">
+      <div class="card-content">
+        <form [formGroup]="postForm" novalidate (ngSubmit)="SubmitPost()">
+          <div class="formDiv">
+            <textarea
+              formControlName="post"
+              class="materialize-textarea"
+            ></textarea>
+            <div class="file-field input-field">
+              <div class="row">
+
+                <div class="col s1">
+                  <angular-file-uploader #fileUpload1 [config]="afuConfig" (ApiResponse)="onFileSelected($event)"  > </angular-file-uploader>
+                </div>
+
+                <button class="btn postBtn" style="margin-right: 11px;">Post</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

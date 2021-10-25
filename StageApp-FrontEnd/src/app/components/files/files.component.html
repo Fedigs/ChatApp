@@ -1,0 +1,36 @@
+<app-toolbar></app-toolbar>
+
+<div class="container" style="margin-top: 30px">
+  <div class="row">
+    <div class="col s12 m4 l3">
+      <app-side></app-side>
+    </div>
+
+    <div class="col s12 m8 l9">
+      <div class="row">
+        <angular-file-uploader
+          #fileUpload1
+          [config]="afuConfig"
+          (ApiResponse)="onFileSelected($event)"
+        >
+        </angular-file-uploader>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12 m6 l3" *ngFor="let file of files">
+        <div class="item-img-wrap imgDiv text_snippet">
+          <img
+            class="imgCircle"
+            src="{{ apiURl }}/{{ fileUrl }}/Filetype-Docs-icon.png"
+            (click)="download(file.fileName)"
+          />
+
+          {{ file.fileName }}
+
+          <button class="btn imgBtn">Share</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

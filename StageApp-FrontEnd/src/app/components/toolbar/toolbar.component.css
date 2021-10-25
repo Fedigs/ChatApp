@@ -1,0 +1,126 @@
+.title {
+  color: #64b5f6;
+  margin: 0px !important;
+  padding: 0px !important;
+  font-weight: normal;
+}
+
+.isRead {
+  color: #64b5f6;
+  margin: 0px !important;
+  padding: 0px !important;
+  font-weight: normal;
+}
+
+.unread {
+  color: #64b5f6;
+  margin: 0px !important;
+  padding: 0px !important;
+  font-weight: bold;
+}
+
+.time {
+  margin-bottom: 10px !important;
+  font-style: italic;
+}
+
+.text {
+  text-align: center;
+}
+
+.material-icons {
+  color: #64b5f6 !important;
+  cursor: pointer;
+}
+
+.secondary-content {
+  margin-top: -5px !important;
+}
+
+.markAll {
+  /* color: #64b5f6;
+  background: inherit !important; */
+  background: #64b5f6;
+  color: #ffffff;
+}
+
+/*amal*/
+.nav-extended {
+  background: #64b5f6;
+
+  /* height: 300px; */
+}
+.nav-content {
+  text-align: center;
+  line-height: 0px;
+  width: 100%;
+  margin-top: 30px;
+}
+h1 {
+  margin-top: 0%;
+  margin-bottom: 0px !important;
+}
+p {
+  margin-top: 0%;
+  margin-bottom: 0px !important;
+}
+.brand-logo {
+  font-weight: bold;
+  font-family: cursive;
+}
+.user-text {
+  padding-top: 0%;
+}
+#image {
+  /* margin-left: 40%; */
+  /* display: block;
+  margin: auto; */
+  /* width: 100px;
+  height: 100px; */
+  border: 7px solid #90cdff;
+  border-radius: 50%;
+}
+/* .circle responsive-img {
+  height: 100px;
+  width: 100px;
+} */
+
+.nav-label-icon {
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
+
+#dropdown {
+  height: 200px;
+  overflow-y: scroll;
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#dropdown1 {
+  height: 200px;
+  overflow-y: scroll;
+  display: none;
+  position: absolute;
+  /* right: 0; */
+  background-color: #f9f9f9;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#nav-mobile {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.dropdown-button dropdown-trigger1 {
+  float: right;
+}

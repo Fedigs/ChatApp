@@ -1,0 +1,151 @@
+<nav class="nav-extended">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a (click)="GoToHome()" class="brand-logo">C&S</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="dropdown-button dropdown-trigger" data-target="dropdown">
+          <div style="float: right; padding-right: 10px">
+            <i class="fa fa-globe fa-1x badge"></i>
+            <span class="nav-label-icon" *ngIf="count.length > 0">{{
+              count.length
+            }}</span>
+          </div>
+
+          <ul id="dropdown" class="dropdown-content col s12 collection">
+            <li
+              class="collection-item avatar"
+              *ngFor="let data of notifications"
+            >
+              <!-- <img
+                src="http://res.cloudinary.com/dxlpuufpr/image/upload/v{{
+                  data.senderId.picVersion
+                }}/{{ data.senderId.picId }}"
+                class="circle"
+              /> -->
+              <img
+                src="{{ apiURl }}/{{ imageUrl }}/{{ imageName }}"
+                class="circle"
+              />
+              <span
+                style="font-size: 13px"
+                [ngClass]="data.read ? 'isRead' : 'unread'"
+                >{{ data.message }}</span
+              >
+              <p class="time" style="font-size: 12px">
+                {{ TimeFromNow(data.created) }}
+              </p>
+            </li>
+            <li *ngIf="notifications.length <= 0">
+              <p class="text">No notification</p>
+            </li>
+            <p class="secondary-content">
+              <a class="markAll btn" (click)="MarkAll()"> Mark All As Read</a>
+            </p>
+          </ul>
+        </li>
+
+        <li>&nbsp;</li>
+
+        <!-- Chat dropdown notifications : start-->
+
+        <li class="dropdown-button dropdown-trigger1" data-target="dropdown1">
+          <div style="float: right">
+            <i class="fa fa-bell fa-1x badge"></i>
+            <span class="nav-label-icon" *ngIf="msgNumber > 0"
+              >{{ msgNumber }}
+            </span>
+          </div>
+
+          <ul
+            id="dropdown1"
+            class="dropdown-content col s12 collection"
+            style="width: 300px"
+          >
+            <li
+              class="collection-item avatar"
+              *ngFor="let chat of chatList"
+              (click)="GoToChatPage(chat.receiverId.username)"
+            >
+              <!-- <img
+                src="http://res.cloudinary.com/dxlpuufpr/image/upload/v{{
+                  chat.receiverId.picVersion
+                }}/{{ chat.receiverId.picId }}"
+                class="circle"
+              /> -->
+              <img
+                src="{{ apiURl }}/{{ imageUrl }}/{{ imageName }}"
+                class="circle"
+              />
+              <span style="font-size: 13px" class="title"
+                >{{ chat.receiverId.username }}
+                <a class="secondary-content" style="font-size: 11px">{{
+                  MessageDate(
+                    chat.msgId.message[chat.msgId.message.length - 1].createdAt
+                  )
+                }}</a>
+              </span>
+              <p style="font-size: 12px; max-width: 80%">
+                {{ chat.msgId.message[chat.msgId.message.length - 1].body }}
+                <a
+                  class="secondary-content"
+                  *ngIf="
+                    !chat.msgId.message[chat.msgId.message.length - 1].isRead &&
+                    chat.receiverId.username !==
+                      chat.msgId.message[chat.msgId.message.length - 1]
+                        .receivername
+                  "
+                >
+                  <i class="material-icons">brightness_1</i>
+                </a>
+                <a
+                  class="secondary-content"
+                  *ngIf="
+                    chat.msgId.message[chat.msgId.message.length - 1].isRead
+                  "
+                >
+                  <i class="material-icons">panorama_fish_eye</i>
+                </a>
+              </p>
+            </li>
+            <li *ngIf="notifications.length <= 0">
+              <p class="text">No notification</p>
+            </li>
+            <p class="secondary-content">
+              <a
+                class="markAll btn"
+                (click)="MarkAllMessages()"
+                style="padding-bottom: 2px"
+              >
+                Mark All As Read</a
+              >
+            </p>
+          </ul>
+        </li>
+
+        <!-- Chat dropdown notifications : End  -->
+        <li><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+    <div class="nav-content">
+      <div class="nav-div">
+        <!-- <img
+          id="image"
+          class="circle responsive-img"
+          style="width: 150px; height: 150px"
+          src="http://res.cloudinary.com/dxlpuufpr/image/upload/v{{
+            imageVersion
+          }}/{{ imageId }}"
+        /> -->
+        <img
+          *ngIf="imageName"
+          id="image"
+          class="circle responsive-img"
+          style="width: 150px; height: 150px"
+          src="{{ apiURl }}/{{ imageUrl }}/{{ imageName }}"
+        />
+      </div>
+      <h1 class="profile-name">{{ user.username }}</h1>
+      <!-- <p class="user-text">This is a test</p> -->
+    </div>
+  </div>
+</nav>
